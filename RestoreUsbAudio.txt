@@ -1,0 +1,17 @@
+REM       ChangeUsbAudio
+REM       Version 1.0
+REM       OS: Windows
+REM       Author: RoG1N
+REM       Restore the original audio Connect device.
+REM       Restore the original audio Disconnect device.
+
+DELAY 200
+GUI r
+DELAY 200
+STRING powershell
+DELAY 200
+ENTER
+DELAY 500
+STRING reg add "HKEY_CURRENT_USER\AppEvents\Schemes\Apps\.Default\DeviceDisconnect\.Current"" /t REG_SZ /d "%SystemRoot%\media\Windows Hardware Remove.wav"; reg add "HKEY_CURRENT_USER\AppEvents\Schemes\Apps\.Default\DeviceConnect\.Current" /t REG_SZ /d "%SystemRoot%\media\Windows Hardware Insert.wav" ;Exit;
+DELAY 800
+ENTER
