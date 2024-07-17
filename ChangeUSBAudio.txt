@@ -28,6 +28,6 @@ STRING reg add "HKEY_CURRENT_USER\AppEvents\Schemes\Apps\.Default\DeviceConnect\
 DELAY 100
 STRING reg add "HKEY_CURRENT_USER\AppEvents\Schemes\Apps\.Default\DeviceDisconnect\.Current" /t REG_SZ /d $file /f ;
 DELAY 1000
-EXIT
+STRING EXIT
 DELAY 100
 ENTER
