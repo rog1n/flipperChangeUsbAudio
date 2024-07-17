@@ -1,5 +1,5 @@
 REM       ChangeUsbAudio
-REM       Version 1.2
+REM       Version 1.1
 REM       OS: Windows
 REM       Author: RoG1N
 REM       Change the original audio Connect device to other fun wav audio.
@@ -27,7 +27,9 @@ ENTER
 STRING reg add "HKEY_CURRENT_USER\AppEvents\Schemes\Apps\.Default\DeviceConnect\.Current" /t REG_SZ /d $file2 /f ;
 DELAY 100
 STRING reg add "HKEY_CURRENT_USER\AppEvents\Schemes\Apps\.Default\DeviceDisconnect\.Current" /t REG_SZ /d $file /f ;
-DELAY 1000
+DELAY 100
+ENTER
+DELAY 100
 STRING EXIT
 DELAY 100
 ENTER
